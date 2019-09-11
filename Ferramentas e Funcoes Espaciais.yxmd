@@ -1,0 +1,2492 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2019.2">
+  <Nodes>
+    <Node ToolID="49">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="499" y="582" width="349" height="261" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Informações Geográficas - Pontos Terminais</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="43">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="668" y="631" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="ST_EndPoint([SpatialObj])" field="Ponto Final" size="536870911" type="SpatialObj" />
+                <FormulaField expression="ST_StartPoint([SpatialObj])" field="Ponto Inicial" size="536870911" type="SpatialObj" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="2">
+              <Name />
+              <DefaultAnnotationText>Ponto Final = ST_EndPoint([SpatialObj])
+Ponto Inicial = ST_StartPoint([SpatialOb...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="44">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="764" y="631" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\ProgramData\Alteryx\Engine\Engine_1672_a903b77ce27343e6ab259bdb8da7f73a_\Engine_2728_30fa57fb6c3d485ca4fc82ac3f21fee3_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Mapa</DefaultTab>
+                  <Hints>
+                    <Map>
+                      <BaseMap>CartoLight</BaseMap>
+                    </Map>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="45">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="764" y="727" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\ProgramData\Alteryx\Engine\Engine_1672_a903b77ce27343e6ab259bdb8da7f73a_\Engine_2728_ebee74f7941b40a79c9878e7a66bd1c5_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Mapa</DefaultTab>
+                  <Hints>
+                    <Map>
+                      <BaseMap>Latest:CloudMade</BaseMap>
+                    </Map>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="48">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.SpatialInfo.SpatialInfo">
+            <Position x="668" y="727" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SpatialObj field="SpatialObj" />
+              <SelectedItems>
+                <Item name="EndPointsObj" />
+              </SelectedItems>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSpatialInfo" />
+        </Node>
+        <Node ToolID="26">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="524" y="631" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="15" SearchSubDirs="False" RecordLimit="">C:\Program Files\Alteryx\Samples\en\SampleData\Sample Streets.geo</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Sample Streets.geo</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="NAME" size="40" source="File: C:\Program Files\Alteryx\Samples\en\SampleData\Sample Streets.geo" type="V_String" />
+                <Field name="SpatialObj" size="2147483647" source="File: C:\Program Files\Alteryx\Samples\en\SampleData\Sample Streets.geo" type="SpatialObj" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="50">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="524" y="727" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="15" SearchSubDirs="False" RecordLimit="">C:\Program Files\Alteryx\Samples\en\SampleData\Sample Streets.geo</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Sample Streets.geo</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="NAME" size="40" source="File: C:\Program Files\Alteryx\Samples\en\SampleData\Sample Streets.geo" type="V_String" />
+                <Field name="SpatialObj" size="2147483647" source="File: C:\Program Files\Alteryx\Samples\en\SampleData\Sample Streets.geo" type="SpatialObj" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="54.99995" y="54.00002" width="349.0001" height="229" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Criar pontos</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="1">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="79.99998" y="103" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="13" />
+              <Fields>
+                <Field name="Name" />
+                <Field name="Phone" />
+                <Field name="Lat" />
+                <Field name="Lon" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>All Creatures Great and Small</c>
+                  <c>(307) 687-0354</c>
+                  <c>44.281669659</c>
+                  <c>-105.49227219</c>
+                </r>
+                <r>
+                  <c>Animal House</c>
+                  <c>(307) 358-2022</c>
+                  <c>42.759112653</c>
+                  <c>-105.385263225</c>
+                </r>
+                <r>
+                  <c>Aquatics and Critters</c>
+                  <c>(307) 235-1890</c>
+                  <c>42.845431169</c>
+                  <c>-106.267310125</c>
+                </r>
+                <r>
+                  <c>Barn</c>
+                  <c>(307) 587-9515</c>
+                  <c>44.533497133</c>
+                  <c>-109.03955</c>
+                </r>
+                <r>
+                  <c>Fins and Feathers Pet Shoppe</c>
+                  <c>(307) 856-3333</c>
+                  <c>43.024850926</c>
+                  <c>-108.384878343</c>
+                </r>
+                <r>
+                  <c>Mutt Hut</c>
+                  <c>(307) 684-8710</c>
+                  <c>44.348152961</c>
+                  <c>-106.705347098</c>
+                </r>
+                <r>
+                  <c>Pet City</c>
+                  <c>(307) 638-4183</c>
+                  <c>41.160406824</c>
+                  <c>-104.807258553</c>
+                </r>
+                <r>
+                  <c>Pet Food Outlet</c>
+                  <c>(307) 682-6831</c>
+                  <c>44.268886572</c>
+                  <c>-105.502530342</c>
+                </r>
+                <r>
+                  <c>Petland</c>
+                  <c>(307) 638-6027</c>
+                  <c>41.140643429</c>
+                  <c>-104.76336914</c>
+                </r>
+                <r>
+                  <c>Pets-N-Stuff</c>
+                  <c>(307) 674-7387</c>
+                  <c>44.77867159</c>
+                  <c>-106.939212607</c>
+                </r>
+                <r>
+                  <c>Purr-Fect Pets</c>
+                  <c>(307) 754-9536</c>
+                  <c>44.751644913</c>
+                  <c>-108.757798562</c>
+                </r>
+                <r>
+                  <c>Summit Pets</c>
+                  <c>(307) 789-0719</c>
+                  <c>41.267252307</c>
+                  <c>-110.965114396</c>
+                </r>
+                <r>
+                  <c>Summit Pets of Rock Springs</c>
+                  <c>(307) 362-7997</c>
+                  <c>41.583195076</c>
+                  <c>-109.253753486</c>
+                </r>
+              </Data>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+        <Node ToolID="2">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="224" y="103" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="ST_CreatePoint([Lon], [Lat])" field="Centroide" size="536870911" type="SpatialObj" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[Centroide = ST_CreatePoint([Lon], [Lat])
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="3">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="79.99995" y="199" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="13" />
+              <Fields>
+                <Field name="Name" />
+                <Field name="Phone" />
+                <Field name="Lat" />
+                <Field name="Lon" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>All Creatures Great and Small</c>
+                  <c>(307) 687-0354</c>
+                  <c>44.281669659</c>
+                  <c>-105.49227219</c>
+                </r>
+                <r>
+                  <c>Animal House</c>
+                  <c>(307) 358-2022</c>
+                  <c>42.759112653</c>
+                  <c>-105.385263225</c>
+                </r>
+                <r>
+                  <c>Aquatics and Critters</c>
+                  <c>(307) 235-1890</c>
+                  <c>42.845431169</c>
+                  <c>-106.267310125</c>
+                </r>
+                <r>
+                  <c>Barn</c>
+                  <c>(307) 587-9515</c>
+                  <c>44.533497133</c>
+                  <c>-109.03955</c>
+                </r>
+                <r>
+                  <c>Fins and Feathers Pet Shoppe</c>
+                  <c>(307) 856-3333</c>
+                  <c>43.024850926</c>
+                  <c>-108.384878343</c>
+                </r>
+                <r>
+                  <c>Mutt Hut</c>
+                  <c>(307) 684-8710</c>
+                  <c>44.348152961</c>
+                  <c>-106.705347098</c>
+                </r>
+                <r>
+                  <c>Pet City</c>
+                  <c>(307) 638-4183</c>
+                  <c>41.160406824</c>
+                  <c>-104.807258553</c>
+                </r>
+                <r>
+                  <c>Pet Food Outlet</c>
+                  <c>(307) 682-6831</c>
+                  <c>44.268886572</c>
+                  <c>-105.502530342</c>
+                </r>
+                <r>
+                  <c>Petland</c>
+                  <c>(307) 638-6027</c>
+                  <c>41.140643429</c>
+                  <c>-104.76336914</c>
+                </r>
+                <r>
+                  <c>Pets-N-Stuff</c>
+                  <c>(307) 674-7387</c>
+                  <c>44.77867159</c>
+                  <c>-106.939212607</c>
+                </r>
+                <r>
+                  <c>Purr-Fect Pets</c>
+                  <c>(307) 754-9536</c>
+                  <c>44.751644913</c>
+                  <c>-108.757798562</c>
+                </r>
+                <r>
+                  <c>Summit Pets</c>
+                  <c>(307) 789-0719</c>
+                  <c>41.267252307</c>
+                  <c>-110.965114396</c>
+                </r>
+                <r>
+                  <c>Summit Pets of Rock Springs</c>
+                  <c>(307) 362-7997</c>
+                  <c>41.583195076</c>
+                  <c>-109.253753486</c>
+                </r>
+              </Data>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+        <Node ToolID="4">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.CreatePoints.CreatePoints">
+            <Position x="224" y="199" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Fields fieldX="Lon" fieldY="Lat" />
+              <Mode>Double</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxCreatePoints" />
+        </Node>
+        <Node ToolID="5">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="320" y="103" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\ProgramData\Alteryx\Engine\Engine_11408_38a9d257d7cf40d59eabc065fb993ad9_\Engine_2728_ba05032ec4d64285b80de48334151e05_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Mapa</DefaultTab>
+                  <Hints>
+                    <Map>
+                      <BaseMap>CartoLight</BaseMap>
+                    </Map>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="6">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="320" y="199" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\ProgramData\Alteryx\Engine\Engine_11408_38a9d257d7cf40d59eabc065fb993ad9_\Engine_2728_42b74d12cd9746aa8f99257734d3a71d_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Mapa</DefaultTab>
+                  <Hints>
+                    <Map>
+                      <BaseMap>CartoLight</BaseMap>
+                    </Map>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="498.9999" y="54.00002" width="349.0001" height="229" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Distância</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="10">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="668" y="103" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="ST_Distance([Customer Point],[Store Point],&quot;Km&quot;)" field="Distância" size="8" type="Double" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="2">
+              <Name />
+              <AnnotationText><![CDATA[Distância = ST_Distance([Customer Point],[Store Point],"Km")
+]]></AnnotationText>
+              <DefaultAnnotationText><![CDATA[Distância = ST_Distance([Customer Point],[Store Point],"Km")
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="13">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="764" y="103" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\ProgramData\Alteryx\Engine\Engine_11388_00cf8c7f356a450ca94b5cff4ca3c801_\Engine_2728_4f1b6b3e9d2744c58bd8efdca1d00b0c_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Mapa</DefaultTab>
+                  <Hints>
+                    <Map>
+                      <BaseMap>CartoLight</BaseMap>
+                    </Map>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="14">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="764" y="199" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\ProgramData\Alteryx\Engine\Engine_11388_00cf8c7f356a450ca94b5cff4ca3c801_\Engine_2728_1d29b78e0b8c4a44b2e67ef905cee4fa_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Mapa</DefaultTab>
+                  <Hints>
+                    <Map>
+                      <BaseMap>CartoLight</BaseMap>
+                    </Map>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="8">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="524" y="103" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="10" />
+              <Fields>
+                <Field name="CustomerID" />
+                <Field name="Store Num" />
+                <Field name="Address" />
+                <Field name="City" />
+                <Field name="State" />
+                <Field name="Zip" />
+                <Field name="Customer Point" />
+                <Field name="Store Point" />
+                <Field name="Trade Area" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>1</c>
+                  <c>05697</c>
+                  <c>376 S JASMINE ST</c>
+                  <c>DENVER</c>
+                  <c>CO</c>
+                  <c>80224</c>
+                  <c>{ "type": "Point", "coordinates": [ -104.918582, 39.709734 ] }</c>
+                  <c>{ "type": "Point", "coordinates": [ -104.937416, 39.707518 ] }</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -122.273712, 41.086597 ], [ -122.358856, 41.051395 ], [ -122.301178, 41.176587 ], [ -122.273712, 41.086597 ] ] ] }</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>09512</c>
+                  <c>846 S UMATILLA WAY</c>
+                  <c>DENVER</c>
+                  <c>CO</c>
+                  <c>80223</c>
+                  <c>{ "type": "Point", "coordinates": [ -105.012176, 39.700928 ] }</c>
+                  <c>{ "type": "Point", "coordinates": [ -105.009630, 39.650999 ] }</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -122.273712, 41.086597 ], [ -122.358856, 41.051395 ], [ -122.301178, 41.176587 ], [ -122.273712, 41.086597 ] ] ] }</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>05077</c>
+                  <c>5360 ZUNI ST</c>
+                  <c>DENVER</c>
+                  <c>CO</c>
+                  <c>80221</c>
+                  <c>{ "type": "Point", "coordinates": [ -105.015645, 39.793924 ] }</c>
+                  <c>{ "type": "Point", "coordinates": [ -105.053388, 39.747517 ] }</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -122.273712, 41.086597 ], [ -122.358856, 41.051395 ], [ -122.301178, 41.176587 ], [ -122.273712, 41.086597 ] ] ] }</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>05697</c>
+                  <c>1599 WILLIAMS ST</c>
+                  <c>DENVER</c>
+                  <c>CO</c>
+                  <c>80218</c>
+                  <c>{ "type": "Point", "coordinates": [ -104.966148, 39.741620 ] }</c>
+                  <c>{ "type": "Point", "coordinates": [ -104.937416, 39.707518 ] }</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -122.273712, 41.086597 ], [ -122.358856, 41.051395 ], [ -122.301178, 41.176587 ], [ -122.273712, 41.086597 ] ] ] }</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>05093</c>
+                  <c>12066 E LAKE CIR</c>
+                  <c>ENGLEWOOD</c>
+                  <c>CO</c>
+                  <c>80111</c>
+                  <c>{ "type": "Point", "coordinates": [ -104.849237, 39.606402 ] }</c>
+                  <c>{ "type": "Point", "coordinates": [ -104.880796, 39.593413 ] }</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -122.273712, 41.086597 ], [ -122.358856, 41.051395 ], [ -122.301178, 41.176587 ], [ -122.273712, 41.086597 ] ] ] }</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>06425</c>
+                  <c>7225 S GAYLORD ST</c>
+                  <c>LITTLETON</c>
+                  <c>CO</c>
+                  <c>80122</c>
+                  <c>{ "type": "Point", "coordinates": [ -104.962488, 39.587013 ] }</c>
+                  <c>{ "type": "Point", "coordinates": [ -104.963420, 39.565950 ] }</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -122.273712, 41.086597 ], [ -122.358856, 41.051395 ], [ -122.301178, 41.176587 ], [ -122.273712, 41.086597 ] ] ] }</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>04576</c>
+                  <c>4497 CORNISH WAY</c>
+                  <c>DENVER</c>
+                  <c>CO</c>
+                  <c>80239</c>
+                  <c>{ "type": "Point", "coordinates": [ -104.830294, 39.777267 ] }</c>
+                  <c>{ "type": "Point", "coordinates": [ -104.895014, 39.785353 ] }</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -122.273712, 41.086597 ], [ -122.358856, 41.051395 ], [ -122.301178, 41.176587 ], [ -122.273712, 41.086597 ] ] ] }</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>05697</c>
+                  <c>2316 E 5TH AVE</c>
+                  <c>DENVER</c>
+                  <c>CO</c>
+                  <c>80206</c>
+                  <c>{ "type": "Point", "coordinates": [ -104.959232, 39.723993 ] }</c>
+                  <c>{ "type": "Point", "coordinates": [ -104.937416, 39.707518 ] }</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -122.273712, 41.086597 ], [ -122.358856, 41.051395 ], [ -122.301178, 41.176587 ], [ -122.273712, 41.086597 ] ] ] }</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>05077</c>
+                  <c>3883 QUITMAN ST</c>
+                  <c>DENVER</c>
+                  <c>CO</c>
+                  <c>80212</c>
+                  <c>{ "type": "Point", "coordinates": [ -105.040646, 39.770703 ] }</c>
+                  <c>{ "type": "Point", "coordinates": [ -105.053388, 39.747517 ] }</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -122.273712, 41.086597 ], [ -122.358856, 41.051395 ], [ -122.301178, 41.176587 ], [ -122.273712, 41.086597 ] ] ] }</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>05077</c>
+                  <c>1965 YUKON ST</c>
+                  <c>DENVER</c>
+                  <c>CO</c>
+                  <c>80214</c>
+                  <c>{ "type": "Point", "coordinates": [ -105.082756, 39.747008 ] }</c>
+                  <c>{ "type": "Point", "coordinates": [ -105.053388, 39.747517 ] }</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -122.273712, 41.086597 ], [ -122.358856, 41.051395 ], [ -122.301178, 41.176587 ], [ -122.273712, 41.086597 ] ] ] }</c>
+                </r>
+              </Data>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+        <Node ToolID="16">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="523.9999" y="199" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="10" />
+              <Fields>
+                <Field name="CustomerID" />
+                <Field name="Store Num" />
+                <Field name="Address" />
+                <Field name="City" />
+                <Field name="State" />
+                <Field name="Zip" />
+                <Field name="Customer Point" />
+                <Field name="Store Point" />
+                <Field name="Trade Area" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>1</c>
+                  <c>05697</c>
+                  <c>376 S JASMINE ST</c>
+                  <c>DENVER</c>
+                  <c>CO</c>
+                  <c>80224</c>
+                  <c>{ "type": "Point", "coordinates": [ -104.918582, 39.709734 ] }</c>
+                  <c>{ "type": "Point", "coordinates": [ -104.937416, 39.707518 ] }</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -122.273712, 41.086597 ], [ -122.358856, 41.051395 ], [ -122.301178, 41.176587 ], [ -122.273712, 41.086597 ] ] ] }</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>09512</c>
+                  <c>846 S UMATILLA WAY</c>
+                  <c>DENVER</c>
+                  <c>CO</c>
+                  <c>80223</c>
+                  <c>{ "type": "Point", "coordinates": [ -105.012176, 39.700928 ] }</c>
+                  <c>{ "type": "Point", "coordinates": [ -105.009630, 39.650999 ] }</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -122.273712, 41.086597 ], [ -122.358856, 41.051395 ], [ -122.301178, 41.176587 ], [ -122.273712, 41.086597 ] ] ] }</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>05077</c>
+                  <c>5360 ZUNI ST</c>
+                  <c>DENVER</c>
+                  <c>CO</c>
+                  <c>80221</c>
+                  <c>{ "type": "Point", "coordinates": [ -105.015645, 39.793924 ] }</c>
+                  <c>{ "type": "Point", "coordinates": [ -105.053388, 39.747517 ] }</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -122.273712, 41.086597 ], [ -122.358856, 41.051395 ], [ -122.301178, 41.176587 ], [ -122.273712, 41.086597 ] ] ] }</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>05697</c>
+                  <c>1599 WILLIAMS ST</c>
+                  <c>DENVER</c>
+                  <c>CO</c>
+                  <c>80218</c>
+                  <c>{ "type": "Point", "coordinates": [ -104.966148, 39.741620 ] }</c>
+                  <c>{ "type": "Point", "coordinates": [ -104.937416, 39.707518 ] }</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -122.273712, 41.086597 ], [ -122.358856, 41.051395 ], [ -122.301178, 41.176587 ], [ -122.273712, 41.086597 ] ] ] }</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>05093</c>
+                  <c>12066 E LAKE CIR</c>
+                  <c>ENGLEWOOD</c>
+                  <c>CO</c>
+                  <c>80111</c>
+                  <c>{ "type": "Point", "coordinates": [ -104.849237, 39.606402 ] }</c>
+                  <c>{ "type": "Point", "coordinates": [ -104.880796, 39.593413 ] }</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -122.273712, 41.086597 ], [ -122.358856, 41.051395 ], [ -122.301178, 41.176587 ], [ -122.273712, 41.086597 ] ] ] }</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>06425</c>
+                  <c>7225 S GAYLORD ST</c>
+                  <c>LITTLETON</c>
+                  <c>CO</c>
+                  <c>80122</c>
+                  <c>{ "type": "Point", "coordinates": [ -104.962488, 39.587013 ] }</c>
+                  <c>{ "type": "Point", "coordinates": [ -104.963420, 39.565950 ] }</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -122.273712, 41.086597 ], [ -122.358856, 41.051395 ], [ -122.301178, 41.176587 ], [ -122.273712, 41.086597 ] ] ] }</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>04576</c>
+                  <c>4497 CORNISH WAY</c>
+                  <c>DENVER</c>
+                  <c>CO</c>
+                  <c>80239</c>
+                  <c>{ "type": "Point", "coordinates": [ -104.830294, 39.777267 ] }</c>
+                  <c>{ "type": "Point", "coordinates": [ -104.895014, 39.785353 ] }</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -122.273712, 41.086597 ], [ -122.358856, 41.051395 ], [ -122.301178, 41.176587 ], [ -122.273712, 41.086597 ] ] ] }</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>05697</c>
+                  <c>2316 E 5TH AVE</c>
+                  <c>DENVER</c>
+                  <c>CO</c>
+                  <c>80206</c>
+                  <c>{ "type": "Point", "coordinates": [ -104.959232, 39.723993 ] }</c>
+                  <c>{ "type": "Point", "coordinates": [ -104.937416, 39.707518 ] }</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -122.273712, 41.086597 ], [ -122.358856, 41.051395 ], [ -122.301178, 41.176587 ], [ -122.273712, 41.086597 ] ] ] }</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>05077</c>
+                  <c>3883 QUITMAN ST</c>
+                  <c>DENVER</c>
+                  <c>CO</c>
+                  <c>80212</c>
+                  <c>{ "type": "Point", "coordinates": [ -105.040646, 39.770703 ] }</c>
+                  <c>{ "type": "Point", "coordinates": [ -105.053388, 39.747517 ] }</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -122.273712, 41.086597 ], [ -122.358856, 41.051395 ], [ -122.301178, 41.176587 ], [ -122.273712, 41.086597 ] ] ] }</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>05077</c>
+                  <c>1965 YUKON ST</c>
+                  <c>DENVER</c>
+                  <c>CO</c>
+                  <c>80214</c>
+                  <c>{ "type": "Point", "coordinates": [ -105.082756, 39.747008 ] }</c>
+                  <c>{ "type": "Point", "coordinates": [ -105.053388, 39.747517 ] }</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -122.273712, 41.086597 ], [ -122.358856, 41.051395 ], [ -122.301178, 41.176587 ], [ -122.273712, 41.086597 ] ] ] }</c>
+                </r>
+              </Data>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+        <Node ToolID="17">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Distance.Distance">
+            <Position x="668" y="199" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OutputDistance value="True" />
+              <ReturnNearest value="False" />
+              <DistToInsideEdge value="False" />
+              <OutputDriveTimeAndDistance value="False" />
+              <SpatialObjSource>Customer Point</SpatialObjSource>
+              <SpatialObjDest>Store Point</SpatialObjDest>
+              <DriveTimeDataSet>Latest</DriveTimeDataSet>
+              <AllowReverseRoute value="True" />
+              <MaxDriveTime value="30" />
+              <DriveDistanceOnly value="False" />
+              <OutputCardinalDirection value="True" />
+              <OutputDirectionDegrees value="False" />
+              <IsMetric value="True" />
+              <OutputUnits>Kilometers</OutputUnits>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxDistance" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="54.99999" y="318" width="349" height="245" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Informações Geográficas - Area</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="18">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="224" y="367" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="ST_Area([SpatialObj],&quot;SqKm&quot;)" field="Area" size="8" type="Double" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[Area = ST_Area([SpatialObj],"SqKm")
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="19">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="320" y="367" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\ProgramData\Alteryx\Engine\Engine_11832_0c4fe86fe91e492cafb010a63c14dd95_\Engine_2728_af297d46b87741febf123b866779afcf_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Mapa</DefaultTab>
+                  <Hints>
+                    <Map>
+                      <BaseMap>CartoLight</BaseMap>
+                    </Map>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="20">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="320" y="463" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\ProgramData\Alteryx\Engine\Engine_11832_0c4fe86fe91e492cafb010a63c14dd95_\Engine_2728_a3667584dfbf4da7a677dd484b9f24bb_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Mapa</DefaultTab>
+                  <Hints>
+                    <Map>
+                      <BaseMap>CartoLight</BaseMap>
+                    </Map>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="25">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="79.99999" y="367" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Program Files\Alteryx\Samples\en\SampleData\Sample_ZIP.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Sample_ZIP.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Name" size="64" source="File: C:\Products\Wrigley\SourceCode_Alteryx\RuntimeData\Samples\SampleData\Sample_ZIPs.yxdb" type="V_String" />
+                <Field name="Key" size="32" source="File: C:\Products\Wrigley\SourceCode_Alteryx\RuntimeData\Samples\SampleData\Sample_ZIPs.yxdb" type="V_String" />
+                <Field name="SpatialObj" size="2147483647" source="File: C:\Products\Wrigley\SourceCode_Alteryx\RuntimeData\Samples\SampleData\Sample_ZIPs.yxdb" type="SpatialObj" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="27">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="79.99999" y="463" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Program Files\Alteryx\Samples\en\SampleData\Sample_ZIP.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Sample_ZIP.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Name" size="64" source="File: C:\Products\Wrigley\SourceCode_Alteryx\RuntimeData\Samples\SampleData\Sample_ZIPs.yxdb" type="V_String" />
+                <Field name="Key" size="32" source="File: C:\Products\Wrigley\SourceCode_Alteryx\RuntimeData\Samples\SampleData\Sample_ZIPs.yxdb" type="V_String" />
+                <Field name="SpatialObj" size="2147483647" source="File: C:\Products\Wrigley\SourceCode_Alteryx\RuntimeData\Samples\SampleData\Sample_ZIPs.yxdb" type="SpatialObj" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="28">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.SpatialInfo.SpatialInfo">
+            <Position x="224" y="463" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SpatialObj field="SpatialObj" />
+              <SelectedItems>
+                <Item name="AreaKm" />
+              </SelectedItems>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSpatialInfo" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="35">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="55" y="582" width="349" height="245" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Informações Geográficas - Centroide</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="29">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="224" y="631" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="ST_Centroid([SpatialObj])" field="Centroide" size="536870911" type="SpatialObj" />
+                <FormulaField expression="ST_CentroidX([SpatialObj])" field="CentroideX" size="8" type="Double" />
+                <FormulaField expression="ST_CentroidY([SpatialObj])" field="CentroideY" size="8" type="Double" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="2">
+              <Name />
+              <DefaultAnnotationText>Centroide = ST_Centroid([SpatialObj])
+CentroideX = ST_CentroidX([SpatialObj])
+Ce...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="30">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="320" y="631" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\ProgramData\Alteryx\Engine\Engine_10008_805ac61bfe81441abaf901b157a0a293_\Engine_2728_5f5109a8d09f4af5a22655f928bded79_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Mapa</DefaultTab>
+                  <Hints>
+                    <Map>
+                      <BaseMap>CartoLight</BaseMap>
+                    </Map>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="31">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="320" y="727" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\ProgramData\Alteryx\Engine\Engine_10008_805ac61bfe81441abaf901b157a0a293_\Engine_2728_a2490c55283a4dcabb1b1797199cba82_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Mapa</DefaultTab>
+                  <Hints>
+                    <Map>
+                      <BaseMap>CartoLight</BaseMap>
+                    </Map>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="32">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="80.00001" y="631" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Program Files\Alteryx\Samples\en\SampleData\Sample_ZIP.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Sample_ZIP.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Name" size="64" source="File: C:\Products\Wrigley\SourceCode_Alteryx\RuntimeData\Samples\SampleData\Sample_ZIPs.yxdb" type="V_String" />
+                <Field name="Key" size="32" source="File: C:\Products\Wrigley\SourceCode_Alteryx\RuntimeData\Samples\SampleData\Sample_ZIPs.yxdb" type="V_String" />
+                <Field name="SpatialObj" size="2147483647" source="File: C:\Products\Wrigley\SourceCode_Alteryx\RuntimeData\Samples\SampleData\Sample_ZIPs.yxdb" type="SpatialObj" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="33">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="80.00004" y="727" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Program Files\Alteryx\Samples\en\SampleData\Sample_ZIP.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Sample_ZIP.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Name" size="64" source="File: C:\Products\Wrigley\SourceCode_Alteryx\RuntimeData\Samples\SampleData\Sample_ZIPs.yxdb" type="V_String" />
+                <Field name="Key" size="32" source="File: C:\Products\Wrigley\SourceCode_Alteryx\RuntimeData\Samples\SampleData\Sample_ZIPs.yxdb" type="V_String" />
+                <Field name="SpatialObj" size="2147483647" source="File: C:\Products\Wrigley\SourceCode_Alteryx\RuntimeData\Samples\SampleData\Sample_ZIPs.yxdb" type="SpatialObj" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="34">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.SpatialInfo.SpatialInfo">
+            <Position x="224" y="727" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SpatialObj field="SpatialObj" />
+              <SelectedItems>
+                <Item name="CentroidXY" />
+                <Item name="CentroidObj" />
+              </SelectedItems>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSpatialInfo" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="42">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="499" y="318" width="352.837" height="245" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Informações Geográficas - Retangulo delimitador</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="36">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="668" y="367" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="ST_BoundingRectangle([SpatialObj])" field="Retangulo limitador" size="536870911" type="SpatialObj" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="2">
+              <Name />
+              <AnnotationText><![CDATA[Retangulo limitador = ST_BoundingRectangle([SpatialObj])
+]]></AnnotationText>
+              <DefaultAnnotationText><![CDATA[Retangulo limitador = ST_BoundingRectangle([SpatialObj])
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="37">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="764" y="367" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\ProgramData\Alteryx\Engine\Engine_14728_a9234853fbc1404c9179b03f3c5c10a1_\Engine_2728_205a48e6547249b9b913f96229be3d78_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Mapa</DefaultTab>
+                  <Hints>
+                    <Map>
+                      <BaseMap>CartoLight</BaseMap>
+                    </Map>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="38">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="764" y="462.9999" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\ProgramData\Alteryx\Engine\Engine_14728_a9234853fbc1404c9179b03f3c5c10a1_\Engine_2728_8f28ba620f6a443ebeccfd82ef258095_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Mapa</DefaultTab>
+                  <Hints>
+                    <Map>
+                      <BaseMap>CartoLight</BaseMap>
+                    </Map>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="39">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="524" y="367" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Program Files\Alteryx\Samples\en\SampleData\Sample_ZIP.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Sample_ZIP.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Name" size="64" source="File: C:\Products\Wrigley\SourceCode_Alteryx\RuntimeData\Samples\SampleData\Sample_ZIPs.yxdb" type="V_String" />
+                <Field name="Key" size="32" source="File: C:\Products\Wrigley\SourceCode_Alteryx\RuntimeData\Samples\SampleData\Sample_ZIPs.yxdb" type="V_String" />
+                <Field name="SpatialObj" size="2147483647" source="File: C:\Products\Wrigley\SourceCode_Alteryx\RuntimeData\Samples\SampleData\Sample_ZIPs.yxdb" type="SpatialObj" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="40">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="524" y="463" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Program Files\Alteryx\Samples\en\SampleData\Sample_ZIP.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Sample_ZIP.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Name" size="64" source="File: C:\Products\Wrigley\SourceCode_Alteryx\RuntimeData\Samples\SampleData\Sample_ZIPs.yxdb" type="V_String" />
+                <Field name="Key" size="32" source="File: C:\Products\Wrigley\SourceCode_Alteryx\RuntimeData\Samples\SampleData\Sample_ZIPs.yxdb" type="V_String" />
+                <Field name="SpatialObj" size="2147483647" source="File: C:\Products\Wrigley\SourceCode_Alteryx\RuntimeData\Samples\SampleData\Sample_ZIPs.yxdb" type="SpatialObj" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="41">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.SpatialInfo.SpatialInfo">
+            <Position x="668" y="462.9999" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SpatialObj field="SpatialObj" />
+              <SelectedItems>
+                <Item name="RectPolygon" />
+              </SelectedItems>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSpatialInfo" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="57">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="54.99991" y="870" width="349.0001" height="261" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Informações Geográficas - Outras Informações</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="51">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="224" y="919" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="ST_Length([SpatialObj],&quot;Km&quot;)" field="Comprimento" size="8" type="Double" />
+                <FormulaField expression="ST_NumParts([SpatialObj])" field="Número de peças" size="8" type="Int64" />
+                <FormulaField expression="ST_NumPoints([SpatialObj])" field="Número de pontos" size="8" type="Int64" />
+                <FormulaField expression="ST_ObjectType([SpatialObj])" field="Tipo de Objeto" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="2">
+              <Name />
+              <DefaultAnnotationText>Comprimento = ST_Length([SpatialObj],"Km")
+Número de peças = ST_NumParts([Spatia...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="52">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="320" y="919" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\ProgramData\Alteryx\Engine\Engine_14640_ed1294826e964828beb6ff683983e51f_\Engine_2728_7fbf2b8325d84347bd49efd77d234f1a_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Mapa</DefaultTab>
+                  <Hints>
+                    <Map>
+                      <BaseMap>CartoLight</BaseMap>
+                    </Map>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="53">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="320" y="1015" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\ProgramData\Alteryx\Engine\Engine_14640_ed1294826e964828beb6ff683983e51f_\Engine_2728_70a275d598834c5ba5471a53ebbde348_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Mapa</DefaultTab>
+                  <Hints>
+                    <Map>
+                      <BaseMap>CartoLight</BaseMap>
+                    </Map>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="54">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.SpatialInfo.SpatialInfo">
+            <Position x="224" y="1015" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SpatialObj field="SpatialObj" />
+              <SelectedItems>
+                <Item name="LengthKm" />
+                <Item name="NumParts" />
+                <Item name="NumPoints" />
+                <Item name="ObjType" />
+              </SelectedItems>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSpatialInfo" />
+        </Node>
+        <Node ToolID="55">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="80" y="919" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="15" SearchSubDirs="False" RecordLimit="">C:\Program Files\Alteryx\Samples\en\SampleData\Sample Streets.geo</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Sample Streets.geo</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="NAME" size="40" source="File: C:\Program Files\Alteryx\Samples\en\SampleData\Sample Streets.geo" type="V_String" />
+                <Field name="SpatialObj" size="2147483647" source="File: C:\Program Files\Alteryx\Samples\en\SampleData\Sample Streets.geo" type="SpatialObj" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="56">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="79.99991" y="1015" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="15" SearchSubDirs="False" RecordLimit="">C:\Program Files\Alteryx\Samples\en\SampleData\Sample Streets.geo</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Sample Streets.geo</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="NAME" size="40" source="File: C:\Program Files\Alteryx\Samples\en\SampleData\Sample Streets.geo" type="V_String" />
+                <Field name="SpatialObj" size="2147483647" source="File: C:\Program Files\Alteryx\Samples\en\SampleData\Sample Streets.geo" type="SpatialObj" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="64">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="499" y="870" width="410" height="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Processo Geográfico - Combinar</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="19" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="58">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="657" y="919" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="ST_Combine([Store1_TradeArea],[Store2_TradeArea])" field="Combinado Espacial" size="536870911" type="SpatialObj" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="2">
+              <Name />
+              <AnnotationText><![CDATA[Combinado Espacial = ST_Combine([Store1_TradeArea],[Store2_TradeArea])
+]]></AnnotationText>
+              <DefaultAnnotationText><![CDATA[Combinado Espacial = ST_Combine([Store1_TradeArea],[Store2_TradeArea])
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="59">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="824" y="919" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\ProgramData\Alteryx\Engine\Engine_13404_143c30d912a14debadfc7ac529d02491_\Engine_2728_7991b8b8f4f4456fbbc0fc280f053d2f_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Mapa</DefaultTab>
+                  <Hints>
+                    <Map>
+                      <BaseMap>CartoLight</BaseMap>
+                    </Map>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="60">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="825" y="1016" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\ProgramData\Alteryx\Engine\Engine_13404_143c30d912a14debadfc7ac529d02491_\Engine_2728_bf3f2f7224554a87acc9c71e7d974df6_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Mapa</DefaultTab>
+                  <Hints>
+                    <Map>
+                      <BaseMap>CartoLight</BaseMap>
+                    </Map>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="67">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.SpatialProcess.SpatialProcess">
+            <Position x="657" y="1016" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SpatialObjFields field1="Store1_TradeArea" field2="Store2_TradeArea" />
+              <Action action="Combine" noEmpty="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Combinar</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSpatialProcess" />
+        </Node>
+        <Node ToolID="82">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="740" y="919" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Store1_TradeArea" selected="False" />
+                <SelectField field="Store2_TradeArea" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="83">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="741" y="1016" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Store1_TradeArea" selected="False" />
+                <SelectField field="Store2_TradeArea" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="84">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="524" y="919" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="Store1_ID" />
+                <Field name="Store1_TradeArea" />
+                <Field name="Store2_ID" />
+                <Field name="Store2_TradeArea" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>00086</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -105.025509, 39.840025 ], [ -105.025620, 39.837297 ], [ -105.025955, 39.834580 ], [ -105.026511, 39.831884 ], [ -105.027286, 39.829221 ], [ -105.028278, 39.826600 ], [ -105.029482, 39.824032 ], [ -105.030894, 39.821528 ], [ -105.032507, 39.819096 ], [ -105.034317, 39.816747 ], [ -105.036314, 39.814489 ], [ -105.038493, 39.812333 ], [ -105.040843, 39.810286 ], [ -105.043357, 39.808356 ], [ -105.046023, 39.806551 ], [ -105.048832, 39.804878 ], [ -105.051771, 39.803344 ], [ -105.054831, 39.801955 ], [ -105.057998, 39.800716 ], [ -105.061260, 39.799632 ], [ -105.064604, 39.798708 ], [ -105.068017, 39.797946 ], [ -105.071486, 39.797351 ], [ -105.074997, 39.796924 ], [ -105.078535, 39.796667 ], [ -105.082088, 39.796581 ], [ -105.085641, 39.796667 ], [ -105.089179, 39.796924 ], [ -105.092690, 39.797351 ], [ -105.096159, 39.797946 ], [ -105.099572, 39.798708 ], [ -105.102916, 39.799632 ], [ -105.106178, 39.800716 ], [ -105.109345, 39.801955 ], [ -105.112405, 39.803344 ], [ -105.115344, 39.804878 ], [ -105.118153, 39.806551 ], [ -105.120819, 39.808356 ], [ -105.123333, 39.810286 ], [ -105.125683, 39.812333 ], [ -105.127862, 39.814489 ], [ -105.129859, 39.816747 ], [ -105.131669, 39.819096 ], [ -105.133282, 39.821528 ], [ -105.134694, 39.824032 ], [ -105.135898, 39.826600 ], [ -105.136890, 39.829221 ], [ -105.137665, 39.831884 ], [ -105.138221, 39.834580 ], [ -105.138556, 39.837297 ], [ -105.138667, 39.840025 ], [ -105.138556, 39.842753 ], [ -105.138221, 39.845470 ], [ -105.137665, 39.848166 ], [ -105.136890, 39.850829 ], [ -105.135898, 39.853450 ], [ -105.134694, 39.856018 ], [ -105.133282, 39.858522 ], [ -105.131669, 39.860954 ], [ -105.129859, 39.863303 ], [ -105.127862, 39.865561 ], [ -105.125683, 39.867717 ], [ -105.123333, 39.869764 ], [ -105.120819, 39.871694 ], [ -105.118153, 39.873499 ], [ -105.115344, 39.875172 ], [ -105.112405, 39.876706 ], [ -105.109345, 39.878095 ], [ -105.106178, 39.879334 ], [ -105.102916, 39.880418 ], [ -105.099572, 39.881342 ], [ -105.096159, 39.882104 ], [ -105.092690, 39.882699 ], [ -105.089179, 39.883126 ], [ -105.085641, 39.883383 ], [ -105.082088, 39.883469 ], [ -105.078535, 39.883383 ], [ -105.074997, 39.883126 ], [ -105.071486, 39.882699 ], [ -105.068017, 39.882104 ], [ -105.064604, 39.881342 ], [ -105.061260, 39.880418 ], [ -105.057998, 39.879334 ], [ -105.054831, 39.878095 ], [ -105.051771, 39.876706 ], [ -105.048832, 39.875172 ], [ -105.046023, 39.873499 ], [ -105.043357, 39.871694 ], [ -105.040843, 39.869764 ], [ -105.038493, 39.867717 ], [ -105.036314, 39.865561 ], [ -105.034317, 39.863303 ], [ -105.032507, 39.860954 ], [ -105.030894, 39.858522 ], [ -105.029482, 39.856018 ], [ -105.028278, 39.853450 ], [ -105.027286, 39.850829 ], [ -105.026511, 39.848166 ], [ -105.025955, 39.845470 ], [ -105.025620, 39.842753 ], [ -105.025509, 39.840025 ] ] ] }</c>
+                  <c>11756</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -105.053160, 39.789300 ], [ -105.053272, 39.786572 ], [ -105.053606, 39.783855 ], [ -105.054162, 39.781159 ], [ -105.054937, 39.778496 ], [ -105.055928, 39.775875 ], [ -105.057131, 39.773307 ], [ -105.058541, 39.770803 ], [ -105.060154, 39.768371 ], [ -105.061962, 39.766022 ], [ -105.063958, 39.763764 ], [ -105.066135, 39.761608 ], [ -105.068484, 39.759561 ], [ -105.070995, 39.757631 ], [ -105.073660, 39.755826 ], [ -105.076466, 39.754153 ], [ -105.079404, 39.752619 ], [ -105.082461, 39.751230 ], [ -105.085625, 39.749991 ], [ -105.088885, 39.748907 ], [ -105.092227, 39.747983 ], [ -105.095638, 39.747221 ], [ -105.099104, 39.746626 ], [ -105.102612, 39.746199 ], [ -105.106148, 39.745942 ], [ -105.109698, 39.745856 ], [ -105.113248, 39.745942 ], [ -105.116784, 39.746199 ], [ -105.120292, 39.746626 ], [ -105.123758, 39.747221 ], [ -105.127169, 39.747983 ], [ -105.130511, 39.748907 ], [ -105.133771, 39.749991 ], [ -105.136935, 39.751230 ], [ -105.139992, 39.752619 ], [ -105.142930, 39.754153 ], [ -105.145736, 39.755826 ], [ -105.148401, 39.757631 ], [ -105.150912, 39.759561 ], [ -105.153261, 39.761608 ], [ -105.155438, 39.763764 ], [ -105.157434, 39.766022 ], [ -105.159242, 39.768371 ], [ -105.160855, 39.770803 ], [ -105.162265, 39.773307 ], [ -105.163468, 39.775875 ], [ -105.164459, 39.778496 ], [ -105.165234, 39.781159 ], [ -105.165790, 39.783855 ], [ -105.166124, 39.786572 ], [ -105.166236, 39.789300 ], [ -105.166124, 39.792028 ], [ -105.165790, 39.794745 ], [ -105.165234, 39.797441 ], [ -105.164459, 39.800104 ], [ -105.163468, 39.802725 ], [ -105.162265, 39.805293 ], [ -105.160855, 39.807797 ], [ -105.159242, 39.810229 ], [ -105.157434, 39.812578 ], [ -105.155438, 39.814836 ], [ -105.153261, 39.816992 ], [ -105.150912, 39.819039 ], [ -105.148401, 39.820969 ], [ -105.145736, 39.822774 ], [ -105.142930, 39.824447 ], [ -105.139992, 39.825981 ], [ -105.136935, 39.827370 ], [ -105.133771, 39.828609 ], [ -105.130511, 39.829693 ], [ -105.127169, 39.830617 ], [ -105.123758, 39.831379 ], [ -105.120292, 39.831974 ], [ -105.116784, 39.832401 ], [ -105.113248, 39.832658 ], [ -105.109698, 39.832744 ], [ -105.106148, 39.832658 ], [ -105.102612, 39.832401 ], [ -105.099104, 39.831974 ], [ -105.095638, 39.831379 ], [ -105.092227, 39.830617 ], [ -105.088885, 39.829693 ], [ -105.085625, 39.828609 ], [ -105.082461, 39.827370 ], [ -105.079404, 39.825981 ], [ -105.076466, 39.824447 ], [ -105.073660, 39.822774 ], [ -105.070995, 39.820969 ], [ -105.068484, 39.819039 ], [ -105.066135, 39.816992 ], [ -105.063958, 39.814836 ], [ -105.061962, 39.812578 ], [ -105.060154, 39.810229 ], [ -105.058541, 39.807797 ], [ -105.057131, 39.805293 ], [ -105.055928, 39.802725 ], [ -105.054937, 39.800104 ], [ -105.054162, 39.797441 ], [ -105.053606, 39.794745 ], [ -105.053272, 39.792028 ], [ -105.053160, 39.789300 ] ] ] }</c>
+                </r>
+              </Data>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+        <Node ToolID="85">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="524" y="1016" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="Store1_ID" />
+                <Field name="Store1_TradeArea" />
+                <Field name="Store2_ID" />
+                <Field name="Store2_TradeArea" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>00086</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -105.025509, 39.840025 ], [ -105.025620, 39.837297 ], [ -105.025955, 39.834580 ], [ -105.026511, 39.831884 ], [ -105.027286, 39.829221 ], [ -105.028278, 39.826600 ], [ -105.029482, 39.824032 ], [ -105.030894, 39.821528 ], [ -105.032507, 39.819096 ], [ -105.034317, 39.816747 ], [ -105.036314, 39.814489 ], [ -105.038493, 39.812333 ], [ -105.040843, 39.810286 ], [ -105.043357, 39.808356 ], [ -105.046023, 39.806551 ], [ -105.048832, 39.804878 ], [ -105.051771, 39.803344 ], [ -105.054831, 39.801955 ], [ -105.057998, 39.800716 ], [ -105.061260, 39.799632 ], [ -105.064604, 39.798708 ], [ -105.068017, 39.797946 ], [ -105.071486, 39.797351 ], [ -105.074997, 39.796924 ], [ -105.078535, 39.796667 ], [ -105.082088, 39.796581 ], [ -105.085641, 39.796667 ], [ -105.089179, 39.796924 ], [ -105.092690, 39.797351 ], [ -105.096159, 39.797946 ], [ -105.099572, 39.798708 ], [ -105.102916, 39.799632 ], [ -105.106178, 39.800716 ], [ -105.109345, 39.801955 ], [ -105.112405, 39.803344 ], [ -105.115344, 39.804878 ], [ -105.118153, 39.806551 ], [ -105.120819, 39.808356 ], [ -105.123333, 39.810286 ], [ -105.125683, 39.812333 ], [ -105.127862, 39.814489 ], [ -105.129859, 39.816747 ], [ -105.131669, 39.819096 ], [ -105.133282, 39.821528 ], [ -105.134694, 39.824032 ], [ -105.135898, 39.826600 ], [ -105.136890, 39.829221 ], [ -105.137665, 39.831884 ], [ -105.138221, 39.834580 ], [ -105.138556, 39.837297 ], [ -105.138667, 39.840025 ], [ -105.138556, 39.842753 ], [ -105.138221, 39.845470 ], [ -105.137665, 39.848166 ], [ -105.136890, 39.850829 ], [ -105.135898, 39.853450 ], [ -105.134694, 39.856018 ], [ -105.133282, 39.858522 ], [ -105.131669, 39.860954 ], [ -105.129859, 39.863303 ], [ -105.127862, 39.865561 ], [ -105.125683, 39.867717 ], [ -105.123333, 39.869764 ], [ -105.120819, 39.871694 ], [ -105.118153, 39.873499 ], [ -105.115344, 39.875172 ], [ -105.112405, 39.876706 ], [ -105.109345, 39.878095 ], [ -105.106178, 39.879334 ], [ -105.102916, 39.880418 ], [ -105.099572, 39.881342 ], [ -105.096159, 39.882104 ], [ -105.092690, 39.882699 ], [ -105.089179, 39.883126 ], [ -105.085641, 39.883383 ], [ -105.082088, 39.883469 ], [ -105.078535, 39.883383 ], [ -105.074997, 39.883126 ], [ -105.071486, 39.882699 ], [ -105.068017, 39.882104 ], [ -105.064604, 39.881342 ], [ -105.061260, 39.880418 ], [ -105.057998, 39.879334 ], [ -105.054831, 39.878095 ], [ -105.051771, 39.876706 ], [ -105.048832, 39.875172 ], [ -105.046023, 39.873499 ], [ -105.043357, 39.871694 ], [ -105.040843, 39.869764 ], [ -105.038493, 39.867717 ], [ -105.036314, 39.865561 ], [ -105.034317, 39.863303 ], [ -105.032507, 39.860954 ], [ -105.030894, 39.858522 ], [ -105.029482, 39.856018 ], [ -105.028278, 39.853450 ], [ -105.027286, 39.850829 ], [ -105.026511, 39.848166 ], [ -105.025955, 39.845470 ], [ -105.025620, 39.842753 ], [ -105.025509, 39.840025 ] ] ] }</c>
+                  <c>11756</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -105.053160, 39.789300 ], [ -105.053272, 39.786572 ], [ -105.053606, 39.783855 ], [ -105.054162, 39.781159 ], [ -105.054937, 39.778496 ], [ -105.055928, 39.775875 ], [ -105.057131, 39.773307 ], [ -105.058541, 39.770803 ], [ -105.060154, 39.768371 ], [ -105.061962, 39.766022 ], [ -105.063958, 39.763764 ], [ -105.066135, 39.761608 ], [ -105.068484, 39.759561 ], [ -105.070995, 39.757631 ], [ -105.073660, 39.755826 ], [ -105.076466, 39.754153 ], [ -105.079404, 39.752619 ], [ -105.082461, 39.751230 ], [ -105.085625, 39.749991 ], [ -105.088885, 39.748907 ], [ -105.092227, 39.747983 ], [ -105.095638, 39.747221 ], [ -105.099104, 39.746626 ], [ -105.102612, 39.746199 ], [ -105.106148, 39.745942 ], [ -105.109698, 39.745856 ], [ -105.113248, 39.745942 ], [ -105.116784, 39.746199 ], [ -105.120292, 39.746626 ], [ -105.123758, 39.747221 ], [ -105.127169, 39.747983 ], [ -105.130511, 39.748907 ], [ -105.133771, 39.749991 ], [ -105.136935, 39.751230 ], [ -105.139992, 39.752619 ], [ -105.142930, 39.754153 ], [ -105.145736, 39.755826 ], [ -105.148401, 39.757631 ], [ -105.150912, 39.759561 ], [ -105.153261, 39.761608 ], [ -105.155438, 39.763764 ], [ -105.157434, 39.766022 ], [ -105.159242, 39.768371 ], [ -105.160855, 39.770803 ], [ -105.162265, 39.773307 ], [ -105.163468, 39.775875 ], [ -105.164459, 39.778496 ], [ -105.165234, 39.781159 ], [ -105.165790, 39.783855 ], [ -105.166124, 39.786572 ], [ -105.166236, 39.789300 ], [ -105.166124, 39.792028 ], [ -105.165790, 39.794745 ], [ -105.165234, 39.797441 ], [ -105.164459, 39.800104 ], [ -105.163468, 39.802725 ], [ -105.162265, 39.805293 ], [ -105.160855, 39.807797 ], [ -105.159242, 39.810229 ], [ -105.157434, 39.812578 ], [ -105.155438, 39.814836 ], [ -105.153261, 39.816992 ], [ -105.150912, 39.819039 ], [ -105.148401, 39.820969 ], [ -105.145736, 39.822774 ], [ -105.142930, 39.824447 ], [ -105.139992, 39.825981 ], [ -105.136935, 39.827370 ], [ -105.133771, 39.828609 ], [ -105.130511, 39.829693 ], [ -105.127169, 39.830617 ], [ -105.123758, 39.831379 ], [ -105.120292, 39.831974 ], [ -105.116784, 39.832401 ], [ -105.113248, 39.832658 ], [ -105.109698, 39.832744 ], [ -105.106148, 39.832658 ], [ -105.102612, 39.832401 ], [ -105.099104, 39.831974 ], [ -105.095638, 39.831379 ], [ -105.092227, 39.830617 ], [ -105.088885, 39.829693 ], [ -105.085625, 39.828609 ], [ -105.082461, 39.827370 ], [ -105.079404, 39.825981 ], [ -105.076466, 39.824447 ], [ -105.073660, 39.822774 ], [ -105.070995, 39.820969 ], [ -105.068484, 39.819039 ], [ -105.066135, 39.816992 ], [ -105.063958, 39.814836 ], [ -105.061962, 39.812578 ], [ -105.060154, 39.810229 ], [ -105.058541, 39.807797 ], [ -105.057131, 39.805293 ], [ -105.055928, 39.802725 ], [ -105.054937, 39.800104 ], [ -105.054162, 39.797441 ], [ -105.053606, 39.794745 ], [ -105.053272, 39.792028 ], [ -105.053160, 39.789300 ] ] ] }</c>
+                </r>
+              </Data>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="94">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="54.00001" y="1157" width="409" height="257" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Processo Geográfico - Recortar</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="19" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="86">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="211" y="1206" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="ST_Cut([Store1_TradeArea],[Store2_TradeArea])" field="Objeto Recortado" size="536870911" type="SpatialObj" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="2">
+              <Name />
+              <AnnotationText><![CDATA[Combinado Espacial = ST_Combine([Store1_TradeArea],[Store2_TradeArea])
+]]></AnnotationText>
+              <DefaultAnnotationText><![CDATA[Objeto Recortado = ST_Cut([Store1_TradeArea],[Store2_TradeArea])
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="87">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="379" y="1206" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\ProgramData\Alteryx\Engine\Engine_9284_174b85022b5042d9b90d64393a2cf1f0_\Engine_2728_3a76653379da47f695ecd1e2e07d2165_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Mapa</DefaultTab>
+                  <Hints>
+                    <Map>
+                      <BaseMap>CartoLight</BaseMap>
+                    </Map>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="88">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="379" y="1314" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\ProgramData\Alteryx\Engine\Engine_9284_174b85022b5042d9b90d64393a2cf1f0_\Engine_2728_43429404f46540d9b88856ed96b4854e_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Mapa</DefaultTab>
+                  <Hints>
+                    <Map>
+                      <BaseMap>CartoLight</BaseMap>
+                    </Map>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="89">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.SpatialProcess.SpatialProcess">
+            <Position x="211" y="1314" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SpatialObjFields field1="Store1_TradeArea" field2="Store2_TradeArea" />
+              <Action action="Cut2_From1" noEmpty="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Cut2_From1</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSpatialProcess" />
+        </Node>
+        <Node ToolID="90">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="295" y="1206" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Store1_TradeArea" selected="False" />
+                <SelectField field="Store2_TradeArea" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="91">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="295" y="1314" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Store1_TradeArea" selected="False" />
+                <SelectField field="Store2_TradeArea" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="92">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="79.00002" y="1206" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="Store1_ID" />
+                <Field name="Store1_TradeArea" />
+                <Field name="Store2_ID" />
+                <Field name="Store2_TradeArea" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>00086</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -105.025509, 39.840025 ], [ -105.025620, 39.837297 ], [ -105.025955, 39.834580 ], [ -105.026511, 39.831884 ], [ -105.027286, 39.829221 ], [ -105.028278, 39.826600 ], [ -105.029482, 39.824032 ], [ -105.030894, 39.821528 ], [ -105.032507, 39.819096 ], [ -105.034317, 39.816747 ], [ -105.036314, 39.814489 ], [ -105.038493, 39.812333 ], [ -105.040843, 39.810286 ], [ -105.043357, 39.808356 ], [ -105.046023, 39.806551 ], [ -105.048832, 39.804878 ], [ -105.051771, 39.803344 ], [ -105.054831, 39.801955 ], [ -105.057998, 39.800716 ], [ -105.061260, 39.799632 ], [ -105.064604, 39.798708 ], [ -105.068017, 39.797946 ], [ -105.071486, 39.797351 ], [ -105.074997, 39.796924 ], [ -105.078535, 39.796667 ], [ -105.082088, 39.796581 ], [ -105.085641, 39.796667 ], [ -105.089179, 39.796924 ], [ -105.092690, 39.797351 ], [ -105.096159, 39.797946 ], [ -105.099572, 39.798708 ], [ -105.102916, 39.799632 ], [ -105.106178, 39.800716 ], [ -105.109345, 39.801955 ], [ -105.112405, 39.803344 ], [ -105.115344, 39.804878 ], [ -105.118153, 39.806551 ], [ -105.120819, 39.808356 ], [ -105.123333, 39.810286 ], [ -105.125683, 39.812333 ], [ -105.127862, 39.814489 ], [ -105.129859, 39.816747 ], [ -105.131669, 39.819096 ], [ -105.133282, 39.821528 ], [ -105.134694, 39.824032 ], [ -105.135898, 39.826600 ], [ -105.136890, 39.829221 ], [ -105.137665, 39.831884 ], [ -105.138221, 39.834580 ], [ -105.138556, 39.837297 ], [ -105.138667, 39.840025 ], [ -105.138556, 39.842753 ], [ -105.138221, 39.845470 ], [ -105.137665, 39.848166 ], [ -105.136890, 39.850829 ], [ -105.135898, 39.853450 ], [ -105.134694, 39.856018 ], [ -105.133282, 39.858522 ], [ -105.131669, 39.860954 ], [ -105.129859, 39.863303 ], [ -105.127862, 39.865561 ], [ -105.125683, 39.867717 ], [ -105.123333, 39.869764 ], [ -105.120819, 39.871694 ], [ -105.118153, 39.873499 ], [ -105.115344, 39.875172 ], [ -105.112405, 39.876706 ], [ -105.109345, 39.878095 ], [ -105.106178, 39.879334 ], [ -105.102916, 39.880418 ], [ -105.099572, 39.881342 ], [ -105.096159, 39.882104 ], [ -105.092690, 39.882699 ], [ -105.089179, 39.883126 ], [ -105.085641, 39.883383 ], [ -105.082088, 39.883469 ], [ -105.078535, 39.883383 ], [ -105.074997, 39.883126 ], [ -105.071486, 39.882699 ], [ -105.068017, 39.882104 ], [ -105.064604, 39.881342 ], [ -105.061260, 39.880418 ], [ -105.057998, 39.879334 ], [ -105.054831, 39.878095 ], [ -105.051771, 39.876706 ], [ -105.048832, 39.875172 ], [ -105.046023, 39.873499 ], [ -105.043357, 39.871694 ], [ -105.040843, 39.869764 ], [ -105.038493, 39.867717 ], [ -105.036314, 39.865561 ], [ -105.034317, 39.863303 ], [ -105.032507, 39.860954 ], [ -105.030894, 39.858522 ], [ -105.029482, 39.856018 ], [ -105.028278, 39.853450 ], [ -105.027286, 39.850829 ], [ -105.026511, 39.848166 ], [ -105.025955, 39.845470 ], [ -105.025620, 39.842753 ], [ -105.025509, 39.840025 ] ] ] }</c>
+                  <c>11756</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -105.053160, 39.789300 ], [ -105.053272, 39.786572 ], [ -105.053606, 39.783855 ], [ -105.054162, 39.781159 ], [ -105.054937, 39.778496 ], [ -105.055928, 39.775875 ], [ -105.057131, 39.773307 ], [ -105.058541, 39.770803 ], [ -105.060154, 39.768371 ], [ -105.061962, 39.766022 ], [ -105.063958, 39.763764 ], [ -105.066135, 39.761608 ], [ -105.068484, 39.759561 ], [ -105.070995, 39.757631 ], [ -105.073660, 39.755826 ], [ -105.076466, 39.754153 ], [ -105.079404, 39.752619 ], [ -105.082461, 39.751230 ], [ -105.085625, 39.749991 ], [ -105.088885, 39.748907 ], [ -105.092227, 39.747983 ], [ -105.095638, 39.747221 ], [ -105.099104, 39.746626 ], [ -105.102612, 39.746199 ], [ -105.106148, 39.745942 ], [ -105.109698, 39.745856 ], [ -105.113248, 39.745942 ], [ -105.116784, 39.746199 ], [ -105.120292, 39.746626 ], [ -105.123758, 39.747221 ], [ -105.127169, 39.747983 ], [ -105.130511, 39.748907 ], [ -105.133771, 39.749991 ], [ -105.136935, 39.751230 ], [ -105.139992, 39.752619 ], [ -105.142930, 39.754153 ], [ -105.145736, 39.755826 ], [ -105.148401, 39.757631 ], [ -105.150912, 39.759561 ], [ -105.153261, 39.761608 ], [ -105.155438, 39.763764 ], [ -105.157434, 39.766022 ], [ -105.159242, 39.768371 ], [ -105.160855, 39.770803 ], [ -105.162265, 39.773307 ], [ -105.163468, 39.775875 ], [ -105.164459, 39.778496 ], [ -105.165234, 39.781159 ], [ -105.165790, 39.783855 ], [ -105.166124, 39.786572 ], [ -105.166236, 39.789300 ], [ -105.166124, 39.792028 ], [ -105.165790, 39.794745 ], [ -105.165234, 39.797441 ], [ -105.164459, 39.800104 ], [ -105.163468, 39.802725 ], [ -105.162265, 39.805293 ], [ -105.160855, 39.807797 ], [ -105.159242, 39.810229 ], [ -105.157434, 39.812578 ], [ -105.155438, 39.814836 ], [ -105.153261, 39.816992 ], [ -105.150912, 39.819039 ], [ -105.148401, 39.820969 ], [ -105.145736, 39.822774 ], [ -105.142930, 39.824447 ], [ -105.139992, 39.825981 ], [ -105.136935, 39.827370 ], [ -105.133771, 39.828609 ], [ -105.130511, 39.829693 ], [ -105.127169, 39.830617 ], [ -105.123758, 39.831379 ], [ -105.120292, 39.831974 ], [ -105.116784, 39.832401 ], [ -105.113248, 39.832658 ], [ -105.109698, 39.832744 ], [ -105.106148, 39.832658 ], [ -105.102612, 39.832401 ], [ -105.099104, 39.831974 ], [ -105.095638, 39.831379 ], [ -105.092227, 39.830617 ], [ -105.088885, 39.829693 ], [ -105.085625, 39.828609 ], [ -105.082461, 39.827370 ], [ -105.079404, 39.825981 ], [ -105.076466, 39.824447 ], [ -105.073660, 39.822774 ], [ -105.070995, 39.820969 ], [ -105.068484, 39.819039 ], [ -105.066135, 39.816992 ], [ -105.063958, 39.814836 ], [ -105.061962, 39.812578 ], [ -105.060154, 39.810229 ], [ -105.058541, 39.807797 ], [ -105.057131, 39.805293 ], [ -105.055928, 39.802725 ], [ -105.054937, 39.800104 ], [ -105.054162, 39.797441 ], [ -105.053606, 39.794745 ], [ -105.053272, 39.792028 ], [ -105.053160, 39.789300 ] ] ] }</c>
+                </r>
+              </Data>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+        <Node ToolID="93">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="79.00001" y="1314" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="Store1_ID" />
+                <Field name="Store1_TradeArea" />
+                <Field name="Store2_ID" />
+                <Field name="Store2_TradeArea" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>00086</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -105.025509, 39.840025 ], [ -105.025620, 39.837297 ], [ -105.025955, 39.834580 ], [ -105.026511, 39.831884 ], [ -105.027286, 39.829221 ], [ -105.028278, 39.826600 ], [ -105.029482, 39.824032 ], [ -105.030894, 39.821528 ], [ -105.032507, 39.819096 ], [ -105.034317, 39.816747 ], [ -105.036314, 39.814489 ], [ -105.038493, 39.812333 ], [ -105.040843, 39.810286 ], [ -105.043357, 39.808356 ], [ -105.046023, 39.806551 ], [ -105.048832, 39.804878 ], [ -105.051771, 39.803344 ], [ -105.054831, 39.801955 ], [ -105.057998, 39.800716 ], [ -105.061260, 39.799632 ], [ -105.064604, 39.798708 ], [ -105.068017, 39.797946 ], [ -105.071486, 39.797351 ], [ -105.074997, 39.796924 ], [ -105.078535, 39.796667 ], [ -105.082088, 39.796581 ], [ -105.085641, 39.796667 ], [ -105.089179, 39.796924 ], [ -105.092690, 39.797351 ], [ -105.096159, 39.797946 ], [ -105.099572, 39.798708 ], [ -105.102916, 39.799632 ], [ -105.106178, 39.800716 ], [ -105.109345, 39.801955 ], [ -105.112405, 39.803344 ], [ -105.115344, 39.804878 ], [ -105.118153, 39.806551 ], [ -105.120819, 39.808356 ], [ -105.123333, 39.810286 ], [ -105.125683, 39.812333 ], [ -105.127862, 39.814489 ], [ -105.129859, 39.816747 ], [ -105.131669, 39.819096 ], [ -105.133282, 39.821528 ], [ -105.134694, 39.824032 ], [ -105.135898, 39.826600 ], [ -105.136890, 39.829221 ], [ -105.137665, 39.831884 ], [ -105.138221, 39.834580 ], [ -105.138556, 39.837297 ], [ -105.138667, 39.840025 ], [ -105.138556, 39.842753 ], [ -105.138221, 39.845470 ], [ -105.137665, 39.848166 ], [ -105.136890, 39.850829 ], [ -105.135898, 39.853450 ], [ -105.134694, 39.856018 ], [ -105.133282, 39.858522 ], [ -105.131669, 39.860954 ], [ -105.129859, 39.863303 ], [ -105.127862, 39.865561 ], [ -105.125683, 39.867717 ], [ -105.123333, 39.869764 ], [ -105.120819, 39.871694 ], [ -105.118153, 39.873499 ], [ -105.115344, 39.875172 ], [ -105.112405, 39.876706 ], [ -105.109345, 39.878095 ], [ -105.106178, 39.879334 ], [ -105.102916, 39.880418 ], [ -105.099572, 39.881342 ], [ -105.096159, 39.882104 ], [ -105.092690, 39.882699 ], [ -105.089179, 39.883126 ], [ -105.085641, 39.883383 ], [ -105.082088, 39.883469 ], [ -105.078535, 39.883383 ], [ -105.074997, 39.883126 ], [ -105.071486, 39.882699 ], [ -105.068017, 39.882104 ], [ -105.064604, 39.881342 ], [ -105.061260, 39.880418 ], [ -105.057998, 39.879334 ], [ -105.054831, 39.878095 ], [ -105.051771, 39.876706 ], [ -105.048832, 39.875172 ], [ -105.046023, 39.873499 ], [ -105.043357, 39.871694 ], [ -105.040843, 39.869764 ], [ -105.038493, 39.867717 ], [ -105.036314, 39.865561 ], [ -105.034317, 39.863303 ], [ -105.032507, 39.860954 ], [ -105.030894, 39.858522 ], [ -105.029482, 39.856018 ], [ -105.028278, 39.853450 ], [ -105.027286, 39.850829 ], [ -105.026511, 39.848166 ], [ -105.025955, 39.845470 ], [ -105.025620, 39.842753 ], [ -105.025509, 39.840025 ] ] ] }</c>
+                  <c>11756</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -105.053160, 39.789300 ], [ -105.053272, 39.786572 ], [ -105.053606, 39.783855 ], [ -105.054162, 39.781159 ], [ -105.054937, 39.778496 ], [ -105.055928, 39.775875 ], [ -105.057131, 39.773307 ], [ -105.058541, 39.770803 ], [ -105.060154, 39.768371 ], [ -105.061962, 39.766022 ], [ -105.063958, 39.763764 ], [ -105.066135, 39.761608 ], [ -105.068484, 39.759561 ], [ -105.070995, 39.757631 ], [ -105.073660, 39.755826 ], [ -105.076466, 39.754153 ], [ -105.079404, 39.752619 ], [ -105.082461, 39.751230 ], [ -105.085625, 39.749991 ], [ -105.088885, 39.748907 ], [ -105.092227, 39.747983 ], [ -105.095638, 39.747221 ], [ -105.099104, 39.746626 ], [ -105.102612, 39.746199 ], [ -105.106148, 39.745942 ], [ -105.109698, 39.745856 ], [ -105.113248, 39.745942 ], [ -105.116784, 39.746199 ], [ -105.120292, 39.746626 ], [ -105.123758, 39.747221 ], [ -105.127169, 39.747983 ], [ -105.130511, 39.748907 ], [ -105.133771, 39.749991 ], [ -105.136935, 39.751230 ], [ -105.139992, 39.752619 ], [ -105.142930, 39.754153 ], [ -105.145736, 39.755826 ], [ -105.148401, 39.757631 ], [ -105.150912, 39.759561 ], [ -105.153261, 39.761608 ], [ -105.155438, 39.763764 ], [ -105.157434, 39.766022 ], [ -105.159242, 39.768371 ], [ -105.160855, 39.770803 ], [ -105.162265, 39.773307 ], [ -105.163468, 39.775875 ], [ -105.164459, 39.778496 ], [ -105.165234, 39.781159 ], [ -105.165790, 39.783855 ], [ -105.166124, 39.786572 ], [ -105.166236, 39.789300 ], [ -105.166124, 39.792028 ], [ -105.165790, 39.794745 ], [ -105.165234, 39.797441 ], [ -105.164459, 39.800104 ], [ -105.163468, 39.802725 ], [ -105.162265, 39.805293 ], [ -105.160855, 39.807797 ], [ -105.159242, 39.810229 ], [ -105.157434, 39.812578 ], [ -105.155438, 39.814836 ], [ -105.153261, 39.816992 ], [ -105.150912, 39.819039 ], [ -105.148401, 39.820969 ], [ -105.145736, 39.822774 ], [ -105.142930, 39.824447 ], [ -105.139992, 39.825981 ], [ -105.136935, 39.827370 ], [ -105.133771, 39.828609 ], [ -105.130511, 39.829693 ], [ -105.127169, 39.830617 ], [ -105.123758, 39.831379 ], [ -105.120292, 39.831974 ], [ -105.116784, 39.832401 ], [ -105.113248, 39.832658 ], [ -105.109698, 39.832744 ], [ -105.106148, 39.832658 ], [ -105.102612, 39.832401 ], [ -105.099104, 39.831974 ], [ -105.095638, 39.831379 ], [ -105.092227, 39.830617 ], [ -105.088885, 39.829693 ], [ -105.085625, 39.828609 ], [ -105.082461, 39.827370 ], [ -105.079404, 39.825981 ], [ -105.076466, 39.824447 ], [ -105.073660, 39.822774 ], [ -105.070995, 39.820969 ], [ -105.068484, 39.819039 ], [ -105.066135, 39.816992 ], [ -105.063958, 39.814836 ], [ -105.061962, 39.812578 ], [ -105.060154, 39.810229 ], [ -105.058541, 39.807797 ], [ -105.057131, 39.805293 ], [ -105.055928, 39.802725 ], [ -105.054937, 39.800104 ], [ -105.054162, 39.797441 ], [ -105.053606, 39.794745 ], [ -105.053272, 39.792028 ], [ -105.053160, 39.789300 ] ] ] }</c>
+                </r>
+              </Data>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="103">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="498" y="1157" width="409" height="257" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Processo Geográfico - Intersecção</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="22" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="95">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="655" y="1206" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="ST_Intersection([Store1_TradeArea],[Store2_TradeArea])" field="Intersecção Geográfica" size="536870911" type="SpatialObj" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="2">
+              <Name />
+              <AnnotationText><![CDATA[Combinado Espacial = ST_Combine([Store1_TradeArea],[Store2_TradeArea])
+]]></AnnotationText>
+              <DefaultAnnotationText><![CDATA[Intersecção Geográfica = ST_Intersection([Store1_TradeArea],[Store2_TradeArea])
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="96">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="823" y="1206" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\ProgramData\Alteryx\Engine\Engine_12852_5697ed2ffc1b49f2898258ba1eff21cc_\Engine_2728_2343e31be35b4e36ab0fac5efdb01b61_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Mapa</DefaultTab>
+                  <Hints>
+                    <Map>
+                      <BaseMap>CartoLight</BaseMap>
+                    </Map>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="97">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="823" y="1314" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\ProgramData\Alteryx\Engine\Engine_12852_5697ed2ffc1b49f2898258ba1eff21cc_\Engine_2728_c91475e7b6584e5caaa3352f804d4f59_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Mapa</DefaultTab>
+                  <Hints>
+                    <Map>
+                      <BaseMap>CartoLight</BaseMap>
+                    </Map>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="98">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.SpatialProcess.SpatialProcess">
+            <Position x="655" y="1314" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SpatialObjFields field1="Store1_TradeArea" field2="Store2_TradeArea" />
+              <Action action="Intersection" noEmpty="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Intersecção</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSpatialProcess" />
+        </Node>
+        <Node ToolID="99">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="739" y="1206" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Store1_TradeArea" selected="False" />
+                <SelectField field="Store2_TradeArea" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="100">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="739" y="1314" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Store1_TradeArea" selected="False" />
+                <SelectField field="Store2_TradeArea" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="101">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="523" y="1206" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="Store1_ID" />
+                <Field name="Store1_TradeArea" />
+                <Field name="Store2_ID" />
+                <Field name="Store2_TradeArea" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>00086</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -105.025509, 39.840025 ], [ -105.025620, 39.837297 ], [ -105.025955, 39.834580 ], [ -105.026511, 39.831884 ], [ -105.027286, 39.829221 ], [ -105.028278, 39.826600 ], [ -105.029482, 39.824032 ], [ -105.030894, 39.821528 ], [ -105.032507, 39.819096 ], [ -105.034317, 39.816747 ], [ -105.036314, 39.814489 ], [ -105.038493, 39.812333 ], [ -105.040843, 39.810286 ], [ -105.043357, 39.808356 ], [ -105.046023, 39.806551 ], [ -105.048832, 39.804878 ], [ -105.051771, 39.803344 ], [ -105.054831, 39.801955 ], [ -105.057998, 39.800716 ], [ -105.061260, 39.799632 ], [ -105.064604, 39.798708 ], [ -105.068017, 39.797946 ], [ -105.071486, 39.797351 ], [ -105.074997, 39.796924 ], [ -105.078535, 39.796667 ], [ -105.082088, 39.796581 ], [ -105.085641, 39.796667 ], [ -105.089179, 39.796924 ], [ -105.092690, 39.797351 ], [ -105.096159, 39.797946 ], [ -105.099572, 39.798708 ], [ -105.102916, 39.799632 ], [ -105.106178, 39.800716 ], [ -105.109345, 39.801955 ], [ -105.112405, 39.803344 ], [ -105.115344, 39.804878 ], [ -105.118153, 39.806551 ], [ -105.120819, 39.808356 ], [ -105.123333, 39.810286 ], [ -105.125683, 39.812333 ], [ -105.127862, 39.814489 ], [ -105.129859, 39.816747 ], [ -105.131669, 39.819096 ], [ -105.133282, 39.821528 ], [ -105.134694, 39.824032 ], [ -105.135898, 39.826600 ], [ -105.136890, 39.829221 ], [ -105.137665, 39.831884 ], [ -105.138221, 39.834580 ], [ -105.138556, 39.837297 ], [ -105.138667, 39.840025 ], [ -105.138556, 39.842753 ], [ -105.138221, 39.845470 ], [ -105.137665, 39.848166 ], [ -105.136890, 39.850829 ], [ -105.135898, 39.853450 ], [ -105.134694, 39.856018 ], [ -105.133282, 39.858522 ], [ -105.131669, 39.860954 ], [ -105.129859, 39.863303 ], [ -105.127862, 39.865561 ], [ -105.125683, 39.867717 ], [ -105.123333, 39.869764 ], [ -105.120819, 39.871694 ], [ -105.118153, 39.873499 ], [ -105.115344, 39.875172 ], [ -105.112405, 39.876706 ], [ -105.109345, 39.878095 ], [ -105.106178, 39.879334 ], [ -105.102916, 39.880418 ], [ -105.099572, 39.881342 ], [ -105.096159, 39.882104 ], [ -105.092690, 39.882699 ], [ -105.089179, 39.883126 ], [ -105.085641, 39.883383 ], [ -105.082088, 39.883469 ], [ -105.078535, 39.883383 ], [ -105.074997, 39.883126 ], [ -105.071486, 39.882699 ], [ -105.068017, 39.882104 ], [ -105.064604, 39.881342 ], [ -105.061260, 39.880418 ], [ -105.057998, 39.879334 ], [ -105.054831, 39.878095 ], [ -105.051771, 39.876706 ], [ -105.048832, 39.875172 ], [ -105.046023, 39.873499 ], [ -105.043357, 39.871694 ], [ -105.040843, 39.869764 ], [ -105.038493, 39.867717 ], [ -105.036314, 39.865561 ], [ -105.034317, 39.863303 ], [ -105.032507, 39.860954 ], [ -105.030894, 39.858522 ], [ -105.029482, 39.856018 ], [ -105.028278, 39.853450 ], [ -105.027286, 39.850829 ], [ -105.026511, 39.848166 ], [ -105.025955, 39.845470 ], [ -105.025620, 39.842753 ], [ -105.025509, 39.840025 ] ] ] }</c>
+                  <c>11756</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -105.053160, 39.789300 ], [ -105.053272, 39.786572 ], [ -105.053606, 39.783855 ], [ -105.054162, 39.781159 ], [ -105.054937, 39.778496 ], [ -105.055928, 39.775875 ], [ -105.057131, 39.773307 ], [ -105.058541, 39.770803 ], [ -105.060154, 39.768371 ], [ -105.061962, 39.766022 ], [ -105.063958, 39.763764 ], [ -105.066135, 39.761608 ], [ -105.068484, 39.759561 ], [ -105.070995, 39.757631 ], [ -105.073660, 39.755826 ], [ -105.076466, 39.754153 ], [ -105.079404, 39.752619 ], [ -105.082461, 39.751230 ], [ -105.085625, 39.749991 ], [ -105.088885, 39.748907 ], [ -105.092227, 39.747983 ], [ -105.095638, 39.747221 ], [ -105.099104, 39.746626 ], [ -105.102612, 39.746199 ], [ -105.106148, 39.745942 ], [ -105.109698, 39.745856 ], [ -105.113248, 39.745942 ], [ -105.116784, 39.746199 ], [ -105.120292, 39.746626 ], [ -105.123758, 39.747221 ], [ -105.127169, 39.747983 ], [ -105.130511, 39.748907 ], [ -105.133771, 39.749991 ], [ -105.136935, 39.751230 ], [ -105.139992, 39.752619 ], [ -105.142930, 39.754153 ], [ -105.145736, 39.755826 ], [ -105.148401, 39.757631 ], [ -105.150912, 39.759561 ], [ -105.153261, 39.761608 ], [ -105.155438, 39.763764 ], [ -105.157434, 39.766022 ], [ -105.159242, 39.768371 ], [ -105.160855, 39.770803 ], [ -105.162265, 39.773307 ], [ -105.163468, 39.775875 ], [ -105.164459, 39.778496 ], [ -105.165234, 39.781159 ], [ -105.165790, 39.783855 ], [ -105.166124, 39.786572 ], [ -105.166236, 39.789300 ], [ -105.166124, 39.792028 ], [ -105.165790, 39.794745 ], [ -105.165234, 39.797441 ], [ -105.164459, 39.800104 ], [ -105.163468, 39.802725 ], [ -105.162265, 39.805293 ], [ -105.160855, 39.807797 ], [ -105.159242, 39.810229 ], [ -105.157434, 39.812578 ], [ -105.155438, 39.814836 ], [ -105.153261, 39.816992 ], [ -105.150912, 39.819039 ], [ -105.148401, 39.820969 ], [ -105.145736, 39.822774 ], [ -105.142930, 39.824447 ], [ -105.139992, 39.825981 ], [ -105.136935, 39.827370 ], [ -105.133771, 39.828609 ], [ -105.130511, 39.829693 ], [ -105.127169, 39.830617 ], [ -105.123758, 39.831379 ], [ -105.120292, 39.831974 ], [ -105.116784, 39.832401 ], [ -105.113248, 39.832658 ], [ -105.109698, 39.832744 ], [ -105.106148, 39.832658 ], [ -105.102612, 39.832401 ], [ -105.099104, 39.831974 ], [ -105.095638, 39.831379 ], [ -105.092227, 39.830617 ], [ -105.088885, 39.829693 ], [ -105.085625, 39.828609 ], [ -105.082461, 39.827370 ], [ -105.079404, 39.825981 ], [ -105.076466, 39.824447 ], [ -105.073660, 39.822774 ], [ -105.070995, 39.820969 ], [ -105.068484, 39.819039 ], [ -105.066135, 39.816992 ], [ -105.063958, 39.814836 ], [ -105.061962, 39.812578 ], [ -105.060154, 39.810229 ], [ -105.058541, 39.807797 ], [ -105.057131, 39.805293 ], [ -105.055928, 39.802725 ], [ -105.054937, 39.800104 ], [ -105.054162, 39.797441 ], [ -105.053606, 39.794745 ], [ -105.053272, 39.792028 ], [ -105.053160, 39.789300 ] ] ] }</c>
+                </r>
+              </Data>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+        <Node ToolID="102">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="523" y="1314" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="Store1_ID" />
+                <Field name="Store1_TradeArea" />
+                <Field name="Store2_ID" />
+                <Field name="Store2_TradeArea" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>00086</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -105.025509, 39.840025 ], [ -105.025620, 39.837297 ], [ -105.025955, 39.834580 ], [ -105.026511, 39.831884 ], [ -105.027286, 39.829221 ], [ -105.028278, 39.826600 ], [ -105.029482, 39.824032 ], [ -105.030894, 39.821528 ], [ -105.032507, 39.819096 ], [ -105.034317, 39.816747 ], [ -105.036314, 39.814489 ], [ -105.038493, 39.812333 ], [ -105.040843, 39.810286 ], [ -105.043357, 39.808356 ], [ -105.046023, 39.806551 ], [ -105.048832, 39.804878 ], [ -105.051771, 39.803344 ], [ -105.054831, 39.801955 ], [ -105.057998, 39.800716 ], [ -105.061260, 39.799632 ], [ -105.064604, 39.798708 ], [ -105.068017, 39.797946 ], [ -105.071486, 39.797351 ], [ -105.074997, 39.796924 ], [ -105.078535, 39.796667 ], [ -105.082088, 39.796581 ], [ -105.085641, 39.796667 ], [ -105.089179, 39.796924 ], [ -105.092690, 39.797351 ], [ -105.096159, 39.797946 ], [ -105.099572, 39.798708 ], [ -105.102916, 39.799632 ], [ -105.106178, 39.800716 ], [ -105.109345, 39.801955 ], [ -105.112405, 39.803344 ], [ -105.115344, 39.804878 ], [ -105.118153, 39.806551 ], [ -105.120819, 39.808356 ], [ -105.123333, 39.810286 ], [ -105.125683, 39.812333 ], [ -105.127862, 39.814489 ], [ -105.129859, 39.816747 ], [ -105.131669, 39.819096 ], [ -105.133282, 39.821528 ], [ -105.134694, 39.824032 ], [ -105.135898, 39.826600 ], [ -105.136890, 39.829221 ], [ -105.137665, 39.831884 ], [ -105.138221, 39.834580 ], [ -105.138556, 39.837297 ], [ -105.138667, 39.840025 ], [ -105.138556, 39.842753 ], [ -105.138221, 39.845470 ], [ -105.137665, 39.848166 ], [ -105.136890, 39.850829 ], [ -105.135898, 39.853450 ], [ -105.134694, 39.856018 ], [ -105.133282, 39.858522 ], [ -105.131669, 39.860954 ], [ -105.129859, 39.863303 ], [ -105.127862, 39.865561 ], [ -105.125683, 39.867717 ], [ -105.123333, 39.869764 ], [ -105.120819, 39.871694 ], [ -105.118153, 39.873499 ], [ -105.115344, 39.875172 ], [ -105.112405, 39.876706 ], [ -105.109345, 39.878095 ], [ -105.106178, 39.879334 ], [ -105.102916, 39.880418 ], [ -105.099572, 39.881342 ], [ -105.096159, 39.882104 ], [ -105.092690, 39.882699 ], [ -105.089179, 39.883126 ], [ -105.085641, 39.883383 ], [ -105.082088, 39.883469 ], [ -105.078535, 39.883383 ], [ -105.074997, 39.883126 ], [ -105.071486, 39.882699 ], [ -105.068017, 39.882104 ], [ -105.064604, 39.881342 ], [ -105.061260, 39.880418 ], [ -105.057998, 39.879334 ], [ -105.054831, 39.878095 ], [ -105.051771, 39.876706 ], [ -105.048832, 39.875172 ], [ -105.046023, 39.873499 ], [ -105.043357, 39.871694 ], [ -105.040843, 39.869764 ], [ -105.038493, 39.867717 ], [ -105.036314, 39.865561 ], [ -105.034317, 39.863303 ], [ -105.032507, 39.860954 ], [ -105.030894, 39.858522 ], [ -105.029482, 39.856018 ], [ -105.028278, 39.853450 ], [ -105.027286, 39.850829 ], [ -105.026511, 39.848166 ], [ -105.025955, 39.845470 ], [ -105.025620, 39.842753 ], [ -105.025509, 39.840025 ] ] ] }</c>
+                  <c>11756</c>
+                  <c>{ "type": "Polygon", "coordinates": [ [ [ -105.053160, 39.789300 ], [ -105.053272, 39.786572 ], [ -105.053606, 39.783855 ], [ -105.054162, 39.781159 ], [ -105.054937, 39.778496 ], [ -105.055928, 39.775875 ], [ -105.057131, 39.773307 ], [ -105.058541, 39.770803 ], [ -105.060154, 39.768371 ], [ -105.061962, 39.766022 ], [ -105.063958, 39.763764 ], [ -105.066135, 39.761608 ], [ -105.068484, 39.759561 ], [ -105.070995, 39.757631 ], [ -105.073660, 39.755826 ], [ -105.076466, 39.754153 ], [ -105.079404, 39.752619 ], [ -105.082461, 39.751230 ], [ -105.085625, 39.749991 ], [ -105.088885, 39.748907 ], [ -105.092227, 39.747983 ], [ -105.095638, 39.747221 ], [ -105.099104, 39.746626 ], [ -105.102612, 39.746199 ], [ -105.106148, 39.745942 ], [ -105.109698, 39.745856 ], [ -105.113248, 39.745942 ], [ -105.116784, 39.746199 ], [ -105.120292, 39.746626 ], [ -105.123758, 39.747221 ], [ -105.127169, 39.747983 ], [ -105.130511, 39.748907 ], [ -105.133771, 39.749991 ], [ -105.136935, 39.751230 ], [ -105.139992, 39.752619 ], [ -105.142930, 39.754153 ], [ -105.145736, 39.755826 ], [ -105.148401, 39.757631 ], [ -105.150912, 39.759561 ], [ -105.153261, 39.761608 ], [ -105.155438, 39.763764 ], [ -105.157434, 39.766022 ], [ -105.159242, 39.768371 ], [ -105.160855, 39.770803 ], [ -105.162265, 39.773307 ], [ -105.163468, 39.775875 ], [ -105.164459, 39.778496 ], [ -105.165234, 39.781159 ], [ -105.165790, 39.783855 ], [ -105.166124, 39.786572 ], [ -105.166236, 39.789300 ], [ -105.166124, 39.792028 ], [ -105.165790, 39.794745 ], [ -105.165234, 39.797441 ], [ -105.164459, 39.800104 ], [ -105.163468, 39.802725 ], [ -105.162265, 39.805293 ], [ -105.160855, 39.807797 ], [ -105.159242, 39.810229 ], [ -105.157434, 39.812578 ], [ -105.155438, 39.814836 ], [ -105.153261, 39.816992 ], [ -105.150912, 39.819039 ], [ -105.148401, 39.820969 ], [ -105.145736, 39.822774 ], [ -105.142930, 39.824447 ], [ -105.139992, 39.825981 ], [ -105.136935, 39.827370 ], [ -105.133771, 39.828609 ], [ -105.130511, 39.829693 ], [ -105.127169, 39.830617 ], [ -105.123758, 39.831379 ], [ -105.120292, 39.831974 ], [ -105.116784, 39.832401 ], [ -105.113248, 39.832658 ], [ -105.109698, 39.832744 ], [ -105.106148, 39.832658 ], [ -105.102612, 39.832401 ], [ -105.099104, 39.831974 ], [ -105.095638, 39.831379 ], [ -105.092227, 39.830617 ], [ -105.088885, 39.829693 ], [ -105.085625, 39.828609 ], [ -105.082461, 39.827370 ], [ -105.079404, 39.825981 ], [ -105.076466, 39.824447 ], [ -105.073660, 39.822774 ], [ -105.070995, 39.820969 ], [ -105.068484, 39.819039 ], [ -105.066135, 39.816992 ], [ -105.063958, 39.814836 ], [ -105.061962, 39.812578 ], [ -105.060154, 39.810229 ], [ -105.058541, 39.807797 ], [ -105.057131, 39.805293 ], [ -105.055928, 39.802725 ], [ -105.054937, 39.800104 ], [ -105.054162, 39.797441 ], [ -105.053606, 39.794745 ], [ -105.053272, 39.792028 ], [ -105.053160, 39.789300 ] ] ] }</c>
+                </r>
+              </Data>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="44" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="48" Connection="Output" />
+      <Destination ToolID="45" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="50" Connection="Output" />
+      <Destination ToolID="48" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="34" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="36" Connection="Output" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Output" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="Output" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="51" Connection="Output" />
+      <Destination ToolID="52" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="54" Connection="Output" />
+      <Destination ToolID="53" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="55" Connection="Output" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="Output" />
+      <Destination ToolID="54" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="58" Connection="Output" />
+      <Destination ToolID="82" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="67" Connection="Output" />
+      <Destination ToolID="83" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="82" Connection="Output" />
+      <Destination ToolID="59" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="83" Connection="Output" />
+      <Destination ToolID="60" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="84" Connection="Output" />
+      <Destination ToolID="58" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="85" Connection="Output" />
+      <Destination ToolID="67" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="86" Connection="Output" />
+      <Destination ToolID="90" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="89" Connection="Output" />
+      <Destination ToolID="91" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="90" Connection="Output" />
+      <Destination ToolID="87" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="91" Connection="Output" />
+      <Destination ToolID="88" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="92" Connection="Output" />
+      <Destination ToolID="86" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="93" Connection="Output" />
+      <Destination ToolID="89" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="95" Connection="Output" />
+      <Destination ToolID="99" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="98" Connection="Output" />
+      <Destination ToolID="100" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="99" Connection="Output" />
+      <Destination ToolID="96" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="100" Connection="Output" />
+      <Destination ToolID="97" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="101" Connection="Output" />
+      <Destination ToolID="95" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="102" Connection="Output" />
+      <Destination ToolID="98" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Certifyx_se</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
